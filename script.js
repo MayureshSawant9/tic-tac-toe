@@ -3,7 +3,6 @@ resetBtn = document.querySelector("#reset-game-btn");
 newBtn = document.querySelector("#new-game-btn");
 
 let turnO = true;
-
 const winPatterns = [
     [0,1,2],
     [3,4,5],
@@ -42,7 +41,7 @@ const checkWinner = () => {
             && btns[a].innerText === btns[b].innerText 
             && btns[a].innerHTML === btns[c].innerHTML){
             disableBoard();
-            displayWinner(`${btns[a].innerText} jeet gaya. Bhenchot Ye kya ho gaya!`);
+            displayWinner(`${btns[a].innerText} jeet gaya.`);
             return;
         }
     }
@@ -52,7 +51,7 @@ const checkWinner = () => {
             return
         }
     }
-    displayWinner('Lan_ koi jeeta. Draw')
+    displayWinner('Draw')
 }
 
 for(let btn of btns){
